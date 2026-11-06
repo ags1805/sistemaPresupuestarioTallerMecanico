@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prototipo funcional de NAFER: solicitudes, diagnósticos, presupuestos y turnos." />
+  <title>NAFER | Prototipo de gestión</title>
+  <link rel="icon" type="image/png" href="assets/logo-nafer.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand" aria-label="NAFER, Gestión del Taller"><span class="brand-logo-frame"><img class="brand-logo" src="assets/logo-nafer.png" alt="Logo de NAFER" width="176" height="81" /></span><span class="brand-text">GESTIÓN DEL TALLER</span></div>
+      <div class="sidebar-label" id="role-label">PORTAL DEL CLIENTE</div>
+      <nav id="side-nav" class="side-nav" aria-label="Navegación principal"></nav>
+      <div class="sidebar-footer">
+        <span class="status-dot"></span> Prototipo de demostración<br />
+        <small>Sin base de datos ni acceso real</small>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-left"><button type="button" class="mobile-toggle" id="toggle-menu" aria-label="Abrir menú">☰</button><span class="eyebrow" id="location-crumb">Mi espacio</span></div>
+        <div class="topbar-right">
+          <label for="role-switch" class="switch-label">Simular rol</label>
+          <select id="role-switch" class="role-select" aria-label="Cambiar vista de demostración">
+            <option value="client">Cliente</option>
+            <option value="admin">NAFER · Administrador</option>
+          </select>
+          <span class="avatar" title="NAFER · Sistema de gestión"><img src="assets/logo-nafer.png" alt="NAFER" width="52" height="24" /></span>
+        </div>
+      </header>
+      <main class="main-content" id="screen" tabindex="-1" aria-live="polite"></main>
+    </div>
+  </div>
+  <div id="modal-root" class="modal-root" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <footer class="demo-footer"><span>NAFER · Prototipo UX v1.1</span><button id="reset-demo" type="button" class="text-button">Restablecer datos de muestra</button></footer>
+</body>
+</html>
